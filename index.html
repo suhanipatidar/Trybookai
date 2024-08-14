@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Pricing Page</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#how-it-works">How It Works</a></li>
+                <li><a href="#about-us">About Us</a></li>
+                <li><a href="#pricing">Pricing</a></li>
+            </ul>
+            <div class="nav-buttons">
+                <button id="theme-toggle" class="light-mode-icon"></button>
+                <button id="auth-button">Login/Sign Up</button>
+                <button id="profile-button" style="display:none;">Profile</button>
+                <button id="logout-button" style="display:none;">Log Out</button>
+            </div>
+        </nav>
+    </header>
+
+    <section id="pricing">
+        <h2 style="color: lightcoral">Pricing Plans</h2>
+        <div class="pricing-plan" style=" background-color: lightcoral ;color:black" >
+            <h3>Basic Plan</h3>
+            <p>$10/month</p>
+        </div>
+        <div class="pricing-plan" style="background-color: lightcoral; color:black">
+            <h3>Premium Plan</h3>
+            <p>$20/month</p>
+        </div>
+        <div class="pricing-plan" style="background-color: lightcoral; color:black">
+            <h3>Pro Plan</h3>
+            <p>$30/month</p>
+        </div>
+    </section>
+
+    <!-- Authentication Modal -->
+    <div id="authModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2 id="formTitle">Login</h2>
+            <form id="authForm">
+                <input type="email" id="email" placeholder="Email" required>
+                <input type="password" id="password" placeholder="Password" required>
+                <input type="password" id="confirmPassword" placeholder="Confirm Password" style="display:none;">
+                <button id="submitButton" type="submit">Login</button>
+            </form>
+            <p id="switchLink">Don't have an account? Sign up</p>
+        </div>
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-auth.js"></script>
+    <script src="scripts.js"></script>
+</body>
+</html>
+
+
+
+
+

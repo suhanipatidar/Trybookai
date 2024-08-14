@@ -1,0 +1,203 @@
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--bg-color);
+    background-image: var(--bg-image);
+    background-size: cover;
+    color: var(--text-color);
+    transition: background-color 0.3s, background-image 0.3s, color 0.3s;
+}
+
+header {
+    background-color: var(--header-bg-color);
+    padding: 10px 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    margin: 0;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: var(--nav-link-color);
+    text-decoration: none;
+    padding: 10px;
+    font-size: 16px;
+}
+
+nav ul li a:hover {
+    color: var(--nav-link-hover-color);
+}
+
+/* Navigation Button Styles */
+.nav-buttons {
+    display: flex;
+    align-items: center;
+}
+.pricing-plan {
+    display: inline-block;
+    background-color: var(--pricing-bg-color);
+    padding: 20px;
+    margin: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s;
+}
+
+.pricing-plan:hover {
+    background-color: var(--pricing-hover-bg-color);
+}
+#pricing {
+    text-align: center;
+}
+button {
+    padding: 10px 20px;
+    border: none;
+    background-color: var(--button-bg-color);
+    color: var(--button-text-color);
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+    margin-left: 10px;
+}
+
+button:hover {
+    background-color: var(--button-hover-bg-color);
+}
+
+button:focus {
+    outline: none;
+}
+
+button.light-mode-icon {
+    background-image: url('sun-icon.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 40px;
+    height: 40px;
+}
+
+button.dark-mode-icon {
+    background-image: url('moon-icon.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 40px;
+    height: 40px;
+}
+
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+    padding-top: 60px;
+}
+
+.modal-content {
+    background-color: var(--modal-bg-color);
+    margin: 5% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 500px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    color: var(--modal-text-color);
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.close {
+    color: var(--modal-close-color);
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: var(--modal-close-hover-color);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+button[type="submit"] {
+    width: 100%;
+    background-color: var(--submit-button-bg-color);
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* Light/Dark Mode Variables */
+:root {
+    /* Light Mode Colors */
+    --bg-color: #f0f0f0;
+    --bg-image: url('light-mode-bg.jpg');
+    --text-color: #333;
+    --header-bg-color: #fff;
+    --nav-link-color: #333;
+    --nav-link-hover-color: lightcoral;
+    --button-bg-color: lightcoral;
+    --button-text-color: white;
+    --button-hover-bg-color: #ff6b6b;
+    --modal-bg-color: #fff;
+    --modal-text-color: #333;
+    --modal-close-color: #333;
+    --modal-close-hover-color: #ff6b6b;
+    --submit-button-bg-color: lightcoral;
+}
+
+body.dark-mode {
+    /* Dark Mode Colors */
+    --bg-color: #1f1f1f;
+    --bg-image: url('dark-mode-bg.jpg');
+    --text-color: #ccc;
+    --header-bg-color: #333;
+    --nav-link-color: #ccc;
+    --nav-link-hover-color: lightcoral;
+    --button-bg-color: lightcoral;
+    --button-text-color: white;
+    --button-hover-bg-color: #ff6b6b;
+    --modal-bg-color: #333;
+    --modal-text-color: #ccc;
+    --modal-close-color: #ccc;
+    --modal-close-hover-color: #ff6b6b;
+    --submit-button-bg-color: lightcoral;
+}
